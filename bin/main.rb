@@ -1,10 +1,10 @@
 
 class Player
 
-  #def initialize(name, team)
-  #  @name = name
-  #  @team = team
-  #end
+  def initialize(name, team)
+   @name = name
+   @team = team
+  end
 
   def name
     @name
@@ -14,20 +14,35 @@ class Player
     @team
   end
 
+  def name=(name) 
+    @name = name 
+  end
+
 end
 
-palyer01 = Player.new
-palyer02 = Player.new
+# Creating an object of the class 
 
+def  get_player_data(player_number)
 
-  puts "Please enter your name: "
-  palyer01.name = gets.chomp
+  puts "Hi Player #{player_number}, please type your full name: "
+  player_name = gets.chomp
 
+  puts "Thank you, now please the team you want to belong (X / O): "
+  player_team = gets.chomp
+  else
+    if player_team == 'X'
+  end
 
-puts palyer01.name
+  player = Player.new(player_one_name, player_one_team)
 
-#puts palyer01.team
-#palyer01.set_name
+  player
 
-get_data
+end
 
+player_1 = get_player_data(1)
+puts "Hi " + player_1.name + ", you're going to be player number one, and you selected the '"+ player_1.team + "' team"
+
+player_2 = get_player_data(2)
+puts "\nHi " + player_2.name + ", you're going to be player number one, and you selected the '"+ player_2.team + "' team"
+
+$p2.team = $p1.team == 'X' ? 'O' : 'X' 
