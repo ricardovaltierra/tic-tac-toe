@@ -47,9 +47,9 @@ contributions, issues and feature requests are welcome!<br/>Feel free to check [
 
 ## 🤖 contributor
 
-firmo holanda - [GitHub](https://github.com/firmoholanda)
-
 ricardo valtierra - [GitHub](https://github.com/ricardovaltierra)
+
+firmo holanda - [GitHub](https://github.com/firmoholanda)
 
 
 
