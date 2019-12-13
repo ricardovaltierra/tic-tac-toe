@@ -1,25 +1,6 @@
+#!/usr/bin/env ruby
 
-class Player
-
-  def initialize(name, team)
-   @name = name
-   @team = team
-  end
-
-  def name
-    @name
-  end
-
-  def team
-    @team
-  end
-
-  def name=(name) 
-    @name = name 
-  end
-
-end
-
+require '../lib/game_logic.rb'
 
 def get_player_data
 
@@ -33,9 +14,6 @@ def get_player_data
   puts "Hi Player 2, please type your full name: "
   player02_name = gets.chomp
 
-  #puts "#{player01_name}'s team is: #{player01_team}"
-  #puts "#{player02_name}'s team is: #{player02_team}"
-
 end
 
 get_player_data
@@ -43,7 +21,6 @@ get_player_data
 # Creating an object of the class
   player01 = Player.new(player01_name, player01_team)
   player02 = Player.new(player02_name, player02_team)
-
 
 puts player01.name
 puts player01.team
