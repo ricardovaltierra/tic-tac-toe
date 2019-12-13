@@ -27,8 +27,8 @@ this project can be found in https://github.com/firmoholanda/ruby-bubble-sort
 
 ### ✨ [code picture]
 
-<a href="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/ruby-bubble-sort.png" target="_blank">
-    <img alt="page animation" src="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/ruby-bubble-sort.png"/>
+<a href="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/.png" target="_blank">
+    <img alt="page animation" src="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/.png"/>
 </a>
 
 
