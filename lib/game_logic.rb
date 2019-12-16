@@ -1,40 +1,35 @@
 #!/usr/bin/env ruby
 
-class Player
+require '../lib/game_logic.rb'
 
-  def initialize(name, team)
-   @name = name
-   @team = team
+# UserInterface --------------------------------------------------------------------------- #
+class UserInterface
+  attr_reader :user_interface
+
+  def initialize
+    @user_interface = user_interface
   end
 
-  def name
-    @name
+  def instructions
+    puts "game instructions: "
+    puts "use 1-9 keys to make your turn.\n\n"
+    puts "1|2|3"
+    puts "4|5|6"
+    puts "7|8|9"
   end
 
-  def team
-    @team
-  end
-
-  def name=(name) 
-    @name = name 
-  end
-
-end
-
-class Board
-  $board = ['1','2','3','4','5','6','7','8','9']
-
-  def board
-    $board
-  end
-
-  def display_board
-    puts " #{$board[0]} | #{$board[1]} | #{$board[2]} "
-    puts "---+---+---"
-    puts " #{$board[3]} | #{$board[4]} | #{$board[5]} "
-    puts "---+---+---"
-    puts " #{$board[6]} | #{$board[7]} | #{$board[8]} "
-    puts "\n"    
+  def get_names(players)
+    names = []
+    players.each_with_index do |player, i|
+      puts "\n\nplease enter the name of player #{i+1}:"
+      name = gets.chomp.downcase
+      while name == ""
+        puts "invalid input. please enter a valid name:"
+        name = gets.chomp.downcase
+      end
+      names << name
+    end
+    names
   end
 
 end
