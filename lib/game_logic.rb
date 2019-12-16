@@ -45,6 +45,7 @@ class Board
   def tie?
     board.none? {|x| x == "-"}
   end
+end
 
 # game -------------------------------------------------------------------------------- #
 class Game
@@ -103,5 +104,4 @@ class Game
       #user_interface.play_new_game?
     #end
   end
-  
 end
