@@ -91,28 +91,13 @@ class Game
     board.tie? || board.win?(input)
   end
 
-  # work here
-  def continue_game
-    if user_interface.play_new_game? == "y"
-      puts board[0]
-      board = ["-" * 9]
-      puts board[0]
-      @game_on = true
-    else
-      @game_on = false
-    end
-  end
-
   def play
     intro
-    #while @game_on
-      until game_over?(players[0].team)
-        players.reverse!
-        make_turn
-        user_interface.display(board.board)
-      end
-      user_interface.declare_win(players[0], board)
-      #continue_game
-    #end
+    until game_over?(players[0].team)
+      players.reverse!
+      make_turn
+      user_interface.display(board.board)
+    end
+    user_interface.declare_win(players[0], board)
   end
 end
