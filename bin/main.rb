@@ -85,6 +85,5 @@ end
 game = Game.new
 game.play
 
-
 #user_interface = UserInterface.new
 #user_interface.instructions
