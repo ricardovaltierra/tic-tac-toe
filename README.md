@@ -8,7 +8,7 @@ Microverse version of Tic-Tac-Toe game
 
 ## 🔗 link to assignment
 
-the assignment can be found in the Odin Project's HTML and CSS course that can be found [here](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks).
+the assignment can be found in the Odin Project'sRuby Programming course that can be found [here](https://www.theodinproject.com/courses/ruby-programming/lessons/oop).
 
 
 
