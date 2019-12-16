@@ -34,10 +34,16 @@ this project can be found in https://github.com/firmoholanda/ruby-bubble-sort
 
 ### ✨ [code picture]
 
-<a href="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/.png" target="_blank">
-    <img alt="page animation" src="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/.png"/>
+print screen
+<a href="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/screen01.png" target="_blank">
+    <img alt="page animation" src="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/screen01.png"/>
 </a>
 
+
+uml
+<a href="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/uml01.png" target="_blank">
+    <img alt="page animation" src="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/uml01.png"/>
+</a>
 
 
 ## 🤝 contributing
