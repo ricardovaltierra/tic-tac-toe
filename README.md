@@ -10,8 +10,8 @@ Welcome to the Tic-Tac-Toe game. The game where you just need 1 minute to play.
 The main rules are the following:
 
 - This just for two players (not one, not three)
-- Player #1 type his name
-- Player #2 type his name
+- Player #1 type his name, and then player #2 do the same
+- The teams are randomly selected (you can be either X or O, who knows!)
 
 ## 🔗 link to assignment
 
