@@ -4,7 +4,7 @@ this project is part of a series of projects to be completed by students of [Mic
 
 Microverse version of Tic-Tac-Toe game
 
-## 🔨  instrucctions
+## 🔨 instructions
 
 Welcome to the Tic-Tac-Toe game. The game where you just need 1 minute to play.
 The main rules are the following:
