@@ -1,49 +1,35 @@
+#!/usr/bin/env ruby
 
-class Player
+require '../lib/game_logic.rb'
 
-  def initialize(name, team)
-   @name = name
-   @team = team
+# UserInterface --------------------------------------------------------------------------- #
+class UserInterface
+  attr_reader :user_interface
+
+  def initialize
+    @user_interface = user_interface
   end
 
-  def name
-    @name
+  def instructions
+    puts "game instructions: "
+    puts "use 1-9 keys to make your turn.\n\n"
+    puts "1|2|3"
+    puts "4|5|6"
+    puts "7|8|9"
   end
 
-  def team
-    @team
-  end
-
-  def name=(name) 
-    @name = name 
+  def get_names(players)
+    names = []
+    players.each_with_index do |player, i|
+      puts "\n\nplease enter the name of player #{i+1}:"
+      name = gets.chomp.downcase
+      while name == ""
+        puts "invalid input. please enter a valid name:"
+        name = gets.chomp.downcase
+      end
+      names << name
+    end
+    names
   end
 
 end
-
-
-def get_player_data
-
-  puts "Hi Player 1, please type your full name: "
-  player01_name = gets.chomp
-
-  puts "Thank you, now please select the team you want to belong (X / O): "
-  player01_team = gets.chomp.upcase
-  player02_team = player01_team == 'X'   ? 'O' : 'X'
-
-  puts "Hi Player 2, please type your full name: "
-  player02_name = gets.chomp
-
-  #puts "#{player01_name}'s team is: #{player01_team}"
-  #puts "#{player02_name}'s team is: #{player02_team}"
-
-end
-
-get_player_data
-
-# Creating an object of the class
-  player01 = Player.new(player01_name, player01_team)
-  player02 = Player.new(player02_name, player02_team)
-
-
-puts player01.name
-puts player01.team
