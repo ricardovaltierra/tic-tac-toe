@@ -64,12 +64,7 @@ class UserInterface
   def declare_win(player, board)
     puts "\ngame over!"
     board.win?(player.team) ? (puts "\ncongratulations, #{player.name}!") : (puts "\nit's a tie!")
-  end
-
-  def play_new_game?
-      puts "\nplay a new game? (y or n)"
-      new_game = gets.chomp
-  end
+  end  
 
 end
 
@@ -77,3 +72,4 @@ end
 
 game = Game.new
 game.play
+
