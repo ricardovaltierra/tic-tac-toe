@@ -36,7 +36,7 @@ RSpec.describe Board do
 
 end
 
-# Player --------------------------------------------------------------------- #
+# UserInterface --------------------------------------------------------------------- #
 RSpec.describe UserInterface do
   let(:ui) { UserInterface.new }
 
