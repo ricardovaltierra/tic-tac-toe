@@ -62,6 +62,9 @@ uml
     <img alt="page animation" src="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/uml01.png"/>
 </a>
 
+<a href="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/.png" target="_blank">
+    <img alt="page animation" src="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/.png"/>
+</a>
 
 ## 🤝 contributing
 
