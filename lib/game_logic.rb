@@ -51,11 +51,10 @@ end
 class Game
   attr_reader :board, :user_interface, :players
 
-  def initialize(board = Board.new, user_interface = UserInterface.new, players = [Player.new, Player.new], game_on = true)
+  def initialize(board = Board.new, user_interface = UserInterface.new, players = [Player.new, Player.new])
     @board = board
     @user_interface = user_interface
     @players = players
-    @game_on = game_on
   end
 
   def create_players

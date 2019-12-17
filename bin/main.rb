@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require '../lib/game_logic.rb'
+require_relative '../lib/game_logic.rb'
 
 # UserInterface --------------------------------------------------------------------------- #
 class UserInterface
