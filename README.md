@@ -52,19 +52,17 @@ this project can be found in https://github.com/firmoholanda/ruby-bubble-sort
 ### ✨ [code picture]
 
 print screen
-<a href="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/screen01.png" target="_blank">
-    <img alt="page animation" src="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/screen01.png"/>
+<a href="https://github.com/ricardovaltierra/tic-tac-toe/blob/development/img/screen01.png" target="_blank">
+    <img alt="page animation" src="https://github.com/ricardovaltierra/tic-tac-toe/blob/development/img/screen01.png"/>
 </a>
 
 
 uml
-<a href="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/uml01.png" target="_blank">
-    <img alt="page animation" src="https://github.com/ricardovaltierra/tic-tac-toe/blob/readme-game-instructions/img/uml01.png"/>
+<a href="https://github.com/ricardovaltierra/tic-tac-toe/blob/development/img/uml01.png" target="_blank">
+    <img alt="page animation" src="https://github.com/ricardovaltierra/tic-tac-toe/blob/development/img/uml01.png"/>
 </a>
 
-<a href="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/.png" target="_blank">
-    <img alt="page animation" src="https://github.com/firmoholanda/ruby-bubble-sort/blob/buble-sort/img/.png"/>
-</a>
+
 
 ## 🤝 contributing
 
