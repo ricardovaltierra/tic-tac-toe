@@ -3,13 +3,17 @@ require "./lib/game_logic.rb"
 
 
 
-# Player --------------------------------------------------------------------- #
-RSpec.describe UserInterface do
-  let(:ui) { ui.new }
+# Board --------------------------------------------------------------------- #
+RSpec.describe Board do
+  let(:board) { Board.new }
 
-  describe "#input_valid?" do
-    it "input_valid shold be a value between 1 and 9" do
-      expect(ui.input_valid?("1")).to eql(true)
+  describe "#initialize" do
+    it "initialize empty board to 9 - items" do
+      expect(board.board).to eql( ["-", "-", "-", "-", "-", "-", "-", "-" ,"-"] )
+    end
+
+    it "initialize empty board to 9 - items" do
+      expect(board.board).not_to eql( [" ", " ", " ", " ", " ", " ", " ", " " ," "] )
     end
   end
 
