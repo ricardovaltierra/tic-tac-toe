@@ -67,7 +67,7 @@ class UserInterface
   end
 
   def display_moves(board)
-    board.moves.each { |i| puts "value #: #{i}"}
+    board.moves.each { |i| puts "game move history: #{i}"}
   end
 
 end
@@ -76,4 +76,3 @@ end
 
 game = Game.new
 game.play
-

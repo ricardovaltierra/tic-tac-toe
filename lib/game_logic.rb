@@ -16,7 +16,7 @@ class Board
   attr_accessor :board
   attr_reader :moves
 
-  def initialize(board = Array.new(9, "-"), moves = Array.new )
+  def initialize(board = Array.new(9, "-"), moves = Array.new)
     @board = board
     @moves = moves
   end
@@ -55,6 +55,7 @@ end
 class Game
   attr_reader :board, :user_interface, :players
 
+  private
   def initialize(board = Board.new, user_interface = UserInterface.new, players = [Player.new, Player.new])
     @board = board
     @user_interface = user_interface
@@ -90,17 +91,23 @@ class Game
     select_first_player
   end
 
-  def game_over?(input)
-    board.tie? || board.win?(input)
+  def game_is_tie?
+    board.tie?
   end
 
+  def player_win?(input)
+    board.win?(input)
+  end
+
+  public
   def play
     intro
-    until game_over?(players[0].team)
+    until (game_is_tie? || player_win?(players[0].team)) 
       players.reverse!
       make_turn
       user_interface.display(board.board)
     end
     user_interface.declare_win(players[0], board)
   end
+  
 end
