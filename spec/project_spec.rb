@@ -1,8 +1,6 @@
 require "./bin/main.rb"
 require "./lib/game_logic.rb"
 
-
-
 # Board --------------------------------------------------------------------- #
 RSpec.describe Board do
   let(:board) { Board.new }
@@ -35,6 +33,5 @@ RSpec.describe Board do
     #  expect(board_test.move_valid?(1)).to eql(true)
     #end  
   #end
-  
 
 end
