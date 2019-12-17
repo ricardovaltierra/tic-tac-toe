@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
-
-require '../lib/game_logic.rb'
+require_relative '../lib/game_logic.rb'
 
 # UserInterface --------------------------------------------------------------------------- #
 class UserInterface
@@ -55,7 +54,7 @@ class UserInterface
       puts "invalid input. Please use keys 1-9 to choose an empty position.\n\n"
       turn = gets.chomp
     end
-    turn.to_i
+    turn.to_i    
   end
 
   def input_valid?(turn)
@@ -67,16 +66,8 @@ class UserInterface
     board.win?(player.team) ? (puts "\ncongratulations, #{player.name}!") : (puts "\nit's a tie!")
   end
 
-  def play_new_game?(game_on)
-    #until
-      puts "\nplay a new game? (y or n)"
-      new_game = gets.chomp
-      if new_game == 'y' 
-        game_on = true
-      else
-        game_on =false
-      end
-    #end
+  def display_moves(board)
+    board.moves.each { |i| puts "game move history: #{i}"}
   end
 
 end
@@ -85,6 +76,3 @@ end
 
 game = Game.new
 game.play
-
-#user_interface = UserInterface.new
-#user_interface.instructions
