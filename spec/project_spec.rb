@@ -9,16 +9,7 @@ RSpec.describe Board do
     it "initialize empty board to 9 - items" do
       expect(board.board).to eql( ["-", "-", "-", "-", "-", "-", "-", "-" ,"-"] )
     end
-  end
-end
 
-# Player --------------------------------------------------------------------- #
-RSpec.describe UserInterface do
-  let(:ui) { UserInterface.new }
-
-  describe "#input_valid?" do
-    it "input_valid shold be a value between 1 and 9, and not be taken as a position already" do
-      expect(ui.input_valid?("qwe")).to eql(false)
     it "initialize empty board diferent from 9 - items" do
       expect(board.board).not_to eql( [" ", " ", " ", " ", " ", " ", " ", " " ," "] )
     end
@@ -33,7 +24,7 @@ RSpec.describe UserInterface do
       expect(board.win_positions[3]).not_to eql( [1, 2, 3] )
     end
   end
-end
+
   #describe "#move_valid?" do
     #let(:board_test) { Board.new }
     #board_test[0..8] = ["-", "-", "X", "-", "-", "-", "-", "-" ,"-"]
@@ -43,4 +34,15 @@ end
     #end  
   #end
 
+end
 
+# Player --------------------------------------------------------------------- #
+RSpec.describe UserInterface do
+  let(:ui) { UserInterface.new }
+
+  describe "#input_valid?" do
+    it "input_valid shold be a value between 1 and 9, and not be taken as a position already" do
+      expect(ui.input_valid?("qwe")).to eql(false)
+  end
+ 
+end
