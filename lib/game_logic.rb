@@ -14,9 +14,11 @@ end
 # board ------------------------------------------------------------------------------- #
 class Board
   attr_accessor :board
+  attr_reader :moves
 
-  def initialize(board = Array.new(9, "-"))
+  def initialize(board = Array.new(9, "-"), moves = Array.new )
     @board = board
+    @moves = moves
   end
 
   def move_valid?(input)
@@ -25,6 +27,7 @@ class Board
 
   def take_turn(turn, value)
     board[turn - 1] = value
+    moves.push(value)
   end
 
   def win_positions
@@ -45,6 +48,7 @@ class Board
   def tie?
     board.none? {|x| x == "-"}
   end
+
 end
 
 # game -------------------------------------------------------------------------------- #

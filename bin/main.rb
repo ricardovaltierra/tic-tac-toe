@@ -54,7 +54,7 @@ class UserInterface
       puts "invalid input. Please use keys 1-9 to choose an empty position.\n\n"
       turn = gets.chomp
     end
-    turn.to_i
+    turn.to_i    
   end
 
   def input_valid?(turn)
@@ -64,7 +64,11 @@ class UserInterface
   def declare_win(player, board)
     puts "\ngame over!"
     board.win?(player.team) ? (puts "\ncongratulations, #{player.name}!") : (puts "\nit's a tie!")
-  end  
+  end
+
+  def display_moves(board)
+    board.moves.each { |i| puts "value #: #{i}"}
+  end
 
 end
 
