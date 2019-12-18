@@ -47,8 +47,19 @@ RSpec.describe UserInterface do
     end
   end
 
-  # describe "#get_names" do
-  #   it "the value given must include letters"
-  # end
+  describe "#get_names" do
+    it "the value given must include letters, not just numbers / special characters" do
+      expect(gnValidation).to eql(true) # -> the expected value is true if the condition above is met, otherwise fails
+    end
+  end
+
+  def gnValidation
+    ui = UserInterface.new
+    players = [Player.new, Player.new]
+    names = []
+    names = ui.get_names(players) # -> call to get_name    
+    return true unless names.any? { |name| name == "" || !(name.match(/[a-z]/)) }
+    false
+  end
  
 end
