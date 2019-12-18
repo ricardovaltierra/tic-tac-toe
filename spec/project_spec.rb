@@ -25,15 +25,6 @@ RSpec.describe Board do
     end
   end
 
-  #describe "#move_valid?" do
-    #let(:board_test) { Board.new }
-    #board_test[0..8] = ["-", "-", "X", "-", "-", "-", "-", "-" ,"-"]
-
-    #it "initialize empty board to 9 - items" do
-    #  expect(board_test.move_valid?(1)).to eql(true)
-    #end  
-  #end
-
 end
 
 # UserInterface --------------------------------------------------------------------- #
@@ -43,6 +34,8 @@ RSpec.describe UserInterface do
   describe "#input_valid?" do
     it "input_valid shold be a value between 1 and 9, and not be taken as a position already" do
       expect(ui.input_valid?("qwe")).to eql(false)
+    end
+    
   end
  
 end
