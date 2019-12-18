@@ -90,7 +90,6 @@ class Game
     set_piece
     select_first_player
   end
-
   
   def game_over?(input)
     board.tie? || board.win?(input)

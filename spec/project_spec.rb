@@ -89,9 +89,11 @@ RSpec.describe UserInterface do
   end
 
   # get_turn
-  describe "#" do
+  describe "#get_turn" do
+    player = Player.new
+    board = Board.new
     it "the value given should be between numbers 1 and 9 with no other character or space/tab. \n also the number must not be taken as a position already" do
-      expect(ui.input_valid?("qwe")).to eql(false)
+      expect(ui.get_turn(player, board)).to eql(11)
     end
   end  
 
@@ -101,4 +103,5 @@ RSpec.describe UserInterface do
       expect(ui.input_valid?("qwe")).to eql(false)
     end
   end
+
 end
