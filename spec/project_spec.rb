@@ -74,22 +74,31 @@ end
 RSpec.describe UserInterface do
   let(:ui) { UserInterface.new }
 
-  describe "#input_valid?" do
-    it "the value given should be between numbers 1 and 9 with no other character or space/tab. \n also the number must not be taken as a position already" do
-      expect(ui.input_valid?("qwe")).to eql(false)
-    end
-  end
-
+  # get_names
   describe "#get_names" do
     it "the value given must include letters, not just numbers / special characters" do
       expect(gnValidation).to eql(true) # -> the expected value is true if the condition above is met, otherwise fails
     end
   end
 
+  # method for 'get_names'
   def gnValidation
     names = ui.get_names([Player.new, Player.new])
     return true unless names.any? { |name| name == "" || !(name.match(/[a-z]/)) }
     false
   end
- 
+
+  # get_turn
+  describe "#" do
+    it "the value given should be between numbers 1 and 9 with no other character or space/tab. \n also the number must not be taken as a position already" do
+      expect(ui.input_valid?("qwe")).to eql(false)
+    end
+  end  
+
+  # input_valid?
+  describe "#input_valid?" do
+    it "the value given should be between numbers 1 and 9 with no other character or space/tab. \n also the number must not be taken as a position already" do
+      expect(ui.input_valid?("qwe")).to eql(false)
+    end
+  end
 end

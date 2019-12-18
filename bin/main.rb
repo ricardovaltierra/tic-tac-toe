@@ -54,7 +54,7 @@ class UserInterface
       puts "invalid input. Please use keys 1-9 to choose an empty position.\n\n"
       turn = gets.chomp
     end
-    turn.to_i    
+    turn.to_i
   end
 
   def input_valid?(turn)
