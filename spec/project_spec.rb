@@ -44,9 +44,14 @@ RSpec.describe Board do
 
   # win?
   describe "#win?" do
-    it "win" do
+    it "win if team is in a win possition" do
       board.board = ["X", "X", "X", "-", "-", "-", "-", "-" ,"-"]
       expect(board.win?("X")).to eql(true)
+    end
+    
+    it "does not return win if team is not in a win possition" do
+      board.board = ["X", "X", "X", "-", "-", "-", "-", "-" ,"-"]
+      expect(board.win?("O")).not_to eql(true)
     end
   end
 
