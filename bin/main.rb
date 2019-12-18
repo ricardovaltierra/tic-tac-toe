@@ -74,8 +74,8 @@ end
 
 # start the game ---------------------------------------------------------------------- #
 
-# game = Game.new
-# game.play
+ game = Game.new
+ game.play
 
 # u_interface = UserInterface.new
 # board = Board.new
