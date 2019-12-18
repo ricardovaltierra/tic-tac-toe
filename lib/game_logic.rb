@@ -90,19 +90,17 @@ class Game
     set_piece
     select_first_player
   end
-
-  def game_is_tie?
-    board.tie?
+  
+  def game_over?(input)
+    board.tie? || board.win?(input)
   end
 
-  def player_win?(input)
-    board.win?(input)
-  end
-
+  
   public
+
   def play
     intro
-    until (game_is_tie? || player_win?(players[0].team)) 
+    until game_over?(players[0].team)
       players.reverse!
       make_turn
       user_interface.display(board.board)

@@ -23,8 +23,8 @@ class UserInterface
     players.each_with_index do |player, i|
       puts "\n\nplease enter the name of player #{i+1}:"
       name = gets.chomp.downcase
-      while name == ""
-        puts "invalid input. please enter a valid name:"
+      while (name == "" || !(name.match(/[a-z]/)))
+        puts "invalid input. please enter a valid name: (the name must include letters)"
         name = gets.chomp.downcase
       end
       names << name
@@ -42,7 +42,7 @@ class UserInterface
     puts "\n\n#{players[0].name} has been randomly assigned to #{players[0].team}."
     puts "therefore, #{players[1].name} has been assigned to #{players[1].team}."
   end
-
+  
   def first_turn(player)
     puts "\nThe computer has randomly decided that #{player.name} will go first.\n\n"
   end
@@ -54,7 +54,7 @@ class UserInterface
       puts "invalid input. Please use keys 1-9 to choose an empty position.\n\n"
       turn = gets.chomp
     end
-    turn.to_i    
+    turn.to_i
   end
 
   def input_valid?(turn)
@@ -71,8 +71,3 @@ class UserInterface
   end
 
 end
-
-# start the game ---------------------------------------------------------------------- #
-
-game = Game.new
-game.play
