@@ -87,10 +87,7 @@ RSpec.describe UserInterface do
   end
 
   def gnValidation
-    ui = UserInterface.new
-    players = [Player.new, Player.new]
-    names = []
-    names = ui.get_names(players) # -> call to get_name    
+    names = ui.get_names([Player.new, Player.new])
     return true unless names.any? { |name| name == "" || !(name.match(/[a-z]/)) }
     false
   end
