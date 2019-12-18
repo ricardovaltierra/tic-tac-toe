@@ -55,6 +55,19 @@ RSpec.describe Board do
     end
   end
 
+  # tie?
+  describe "#tie?" do
+    it "its a tie if the board doews not contain -" do
+      board.board = ["X", "X", "O", "O", "X", "X", "O", "O" ,"X"]
+      expect(board.tie?).to eql(true)
+    end
+  
+    it "not a tie if the board contain -" do
+      board.board = ["-", "X", "O", "O", "X", "X", "O", "O" ,"X"]
+      expect(board.tie?).not_to eql(true)
+    end
+  end
+
 end
 
 # UserInterface --------------------------------------------------------------------- #
