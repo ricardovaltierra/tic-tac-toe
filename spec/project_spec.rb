@@ -93,7 +93,7 @@ RSpec.describe UserInterface do
     player = Player.new
     board = Board.new
     it "the value given should be between numbers 1 and 9 with no other character or space/tab. \n also the number must not be taken as a position already" do
-      expect(ui.get_turn(player, board)).to eql(11)
+      (1..9).each { |x| expect(ui.get_turn(player, board)).to eql(x) }
     end
   end  
 
