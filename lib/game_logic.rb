@@ -91,11 +91,14 @@ class Game
     select_first_player
   end
 
+  
   def game_over?(input)
     board.tie? || board.win?(input)
   end
 
+  
   public
+
   def play
     intro
     until game_over?(players[0].team)
