@@ -23,8 +23,8 @@ class UserInterface
     players.each_with_index do |player, i|
       puts "\n\nplease enter the name of player #{i+1}:"
       name = gets.chomp.downcase
-      while name == ""
-        puts "invalid input. please enter a valid name:"
+      while (name == "" || !(name.match(/[a-z]/)))
+        puts "invalid input. please enter a valid name: (the name must include letters)"
         name = gets.chomp.downcase
       end
       names << name
@@ -74,8 +74,8 @@ end
 
 # start the game ---------------------------------------------------------------------- #
 
-game = Game.new
-game.play
+# game = Game.new
+# game.play
 
 # u_interface = UserInterface.new
 # board = Board.new
