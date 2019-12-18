@@ -71,13 +71,3 @@ class UserInterface
   end
 
 end
-
-# start the game ---------------------------------------------------------------------- #
-
- game = Game.new
- game.play
-
-# u_interface = UserInterface.new
-# board = Board.new
-# player_1 = Player.new
-# puts u_interface.get_turn(player_1, Array.new(9, "-"))
