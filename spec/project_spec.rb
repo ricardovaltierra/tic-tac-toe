@@ -70,19 +70,6 @@ RSpec.describe Board do
 
 end
 
-# Game -------------------------------------------------------------------------------- #
-RSpec.describe Game do
-  let(:game) { Game.new }
-
-  # game_over?
-  describe "#game_over?" do
-    it "test game over at the start of the game" do
-      expect(game.game_over?("X")).to eql(false)
-    end
-  end
- 
-end
-
 # UserInterface --------------------------------------------------------------------- #
 RSpec.describe UserInterface do
   let(:ui) { UserInterface.new }
