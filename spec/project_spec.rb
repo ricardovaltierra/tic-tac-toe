@@ -5,6 +5,7 @@ require "./lib/game_logic.rb"
 RSpec.describe Board do
   let(:board) { Board.new }
 
+  # initialize
   describe "#initialize" do
     it "initialize empty board to 9 - items" do
       expect(board.board).to eql( ["-", "-", "-", "-", "-", "-", "-", "-" ,"-"] )
@@ -15,27 +16,25 @@ RSpec.describe Board do
     end
   end
 
-  describe "#win_positions" do
-    # it "board win positions have to be one of thoese diagonals or lines" do
-    #   expect(board.win_positions[3]).to eql( [0, 3, 6] )
-    # end
-
-    # it "boad win positions can not be one of thoese diagonals or lines" do
-    #   expect(board.win_positions[3]).not_to eql( [1, 2, 3] )
-    # end
+  # move_valid?
+  describe "#move_valid?" do
+    it "the array given must match with one of the winner arrays on the program" do
+      expect(board.move_valid?(1)).to eql(true)
+    end
 
     it "the array given must match with one of the winner arrays on the program" do
-      expect(winnerDefinition( [0, 1, 6] )).to eql(false) # -> not a winner row
-      expect(winnerDefinition( [1, 4, 7] )).to eql(true) # -> a winner row
+      expect(board.move_valid?(1)).to eql(true)
+    end
+  end
+  
+  # win_positions
+  describe "#win_positions" do
+    it "the array given must match with one of the winner arrays on the program" do
+      expect(board.win_positions.any?( [0, 1, 6] )).to eql(false) # -> not a winner row
+      expect(board.win_positions.any?( [1, 4, 7] )).to eql(true) # -> a winner row
     end
   end
 
-end
-
-def winnerDefinition(arr)
-  brd = Board.new  
-  return false unless brd.win_positions.any?(arr)
-  true
 end
 
 # UserInterface --------------------------------------------------------------------- #
